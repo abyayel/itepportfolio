@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animations</title>
+    <!-- Include ScrollReveal.js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            background: #f4f4f4;
+            overflow-x: hidden;
+        }
+        .content {
+            padding: 50px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Initially hidden */
+            transform: translateY(50px); /* Start from below */
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="section">
+    <div class="content">
+        <h2>Section 1</h2>
+        <p>This content will fade in and slide up when scrolled into view.</p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="content">
+        <h2>Section 2</h2>
+        <p>This is another section with the same animation.</p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="content">
+        <h2>Section 3</h2>
+        <p>Keep scrolling, and more sections will appear with animation.</p>
+    </div>
+</div>
+
+<!-- Initialize ScrollReveal.js -->
+<script>
+    // ScrollReveal configuration
+    ScrollReveal().reveal('.content', {
+        distance: '50px', // Distance to move up
+        duration: 1000,   // Duration of animation
+        easing: 'ease-in-out', // Easing function for the transition
+        opacity: 0,       // Start with opacity 0
+        origin: 'bottom', // Animate from the bottom
+        interval: 200,    // Delay between each item
+    });
+</script>
+
+</body>
+</html>
